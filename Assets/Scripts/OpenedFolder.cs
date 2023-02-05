@@ -7,6 +7,7 @@ public class OpenedFolder : FoldersNFiles {
         if (GameObject.FindObjectOfType<CurrentFolder>().CompareTag("Root")) {
             gameObject.SetActive(false);
         } else {
+            GetComponent<AudioSource>().Play();
             StartCoroutine(MoveBackground(false));
             ChangeName(GameObject.FindObjectOfType<CurrentFolder>().GetComponent<File>().fileName);
         }

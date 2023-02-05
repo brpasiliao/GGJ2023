@@ -8,6 +8,7 @@ public class ClosedFolder : FoldersNFiles {
     public File folder;
 
     protected override void Click() {
+        transform.parent.GetComponent<AudioSource>().Play();
         StartCoroutine(MoveBackground(true));
         openedFolder.ChangeName(folder.fileName);
         openedFolder.gameObject.SetActive(true);
