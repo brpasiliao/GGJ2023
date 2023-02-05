@@ -26,24 +26,31 @@ public class FoldersNFiles : MonoBehaviour, IPointerClickHandler {
         fileName.text = name;
     }
 
-    public IEnumerator MoveBackground(bool down) {
-        yield return null;
-        if (down) {
-            Vector2 end = new Vector2(background.anchoredPosition.x, background.anchoredPosition.y+600);
-            // while (background.anchoredPosition.y < end.y) {
-            //     background.anchoredPosition = Vector2.Lerp(background.anchoredPosition, end, 2 * Time.deltaTime);
-            //     Debug.Log("still here");
-            //     yield return null;
-            // }
-            background.anchoredPosition = end;
-        } else {
-            Vector2 end = new Vector2(background.anchoredPosition.x, background.anchoredPosition.y-600);
-            // while (background.anchoredPosition.y > end.y) {
-            //     background.anchoredPosition = Vector2.Lerp(background.anchoredPosition, end, 2 * Time.deltaTime);
-            //     yield return null;
-            // }
-            background.anchoredPosition = end;
-        }
-        Debug.Log("done");
+    // public IEnumerator MoveBackground(bool down) {
+    //     yield return null;
+    //     if (down) {
+    //         Vector2 end = new Vector2(background.anchoredPosition.x, background.anchoredPosition.y+600);
+    //         // while (background.anchoredPosition.y < end.y) {
+    //         //     background.anchoredPosition = Vector2.Lerp(background.anchoredPosition, end, 2 * Time.deltaTime);
+    //         //     Debug.Log("still here");
+    //         //     yield return null;
+    //         // }
+    //         background.anchoredPosition = end;
+    //     } else {
+    //         Vector2 end = new Vector2(background.anchoredPosition.x, background.anchoredPosition.y-600);
+    //         // while (background.anchoredPosition.y > end.y) {
+    //         //     background.anchoredPosition = Vector2.Lerp(background.anchoredPosition, end, 2 * Time.deltaTime);
+    //         //     yield return null;
+    //         // }
+    //         background.anchoredPosition = end;
+    //     }
+    //     Debug.Log("done");
+    // }
+
+    public void MoveBackground(bool down) {
+        if (down)
+            background.anchoredPosition = new Vector2(background.anchoredPosition.x, background.anchoredPosition.y+600);
+        else 
+            background.anchoredPosition = new Vector2(background.anchoredPosition.x, background.anchoredPosition.y-600);
     }
 }

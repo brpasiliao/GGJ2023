@@ -5,7 +5,6 @@ using UnityEngine;
 public class NotFolder : FoldersNFiles {
     public GameObject info;
     public GameObject graphic;
-    public string description;
 
     protected override void Click() {
         info.SetActive(true);

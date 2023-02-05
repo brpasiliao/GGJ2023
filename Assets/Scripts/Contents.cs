@@ -29,7 +29,8 @@ public class Contents : MonoBehaviour {
 
             foreach (Transform child in rootImages) 
                 child.gameObject.SetActive(false);
-            rootImages.GetChild(cf.transform.childCount-1).gameObject.SetActive(true);
+            if (cf.transform.childCount != 0)
+                rootImages.GetChild(cf.transform.childCount-1).gameObject.SetActive(true);
             
             while (index < cf.transform.childCount) {
                 content = cf.transform.GetChild(index).GetComponent<File>();
