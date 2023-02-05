@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 
 public class Contents : MonoBehaviour {
+    public Transform rootImages;
+
     public GameObject root;
     public GameObject folder;
     public GameObject text;
@@ -24,6 +26,11 @@ public class Contents : MonoBehaviour {
         } else {
             int index = 0;
             File content;
+
+            foreach (Transform child in rootImages) 
+                child.gameObject.SetActive(false);
+            rootImages.GetChild(cf.transform.childCount-1).gameObject.SetActive(true);
+            
             while (index < cf.transform.childCount) {
                 content = cf.transform.GetChild(index).GetComponent<File>();
                 GameObject aFile = null;

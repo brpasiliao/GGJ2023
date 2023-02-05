@@ -7,6 +7,7 @@ public enum FileType {Folder, Text, Image, Audio};
 public class File : MonoBehaviour {
     public FileType fileType;
     public string fileName;
+    public string description;
 
     public static Contents contents; 
     public Contents contentsPublic; 
