@@ -29,7 +29,7 @@ public class Contents : MonoBehaviour {
 
             foreach (Transform child in rootImages) 
                 child.gameObject.SetActive(false);
-            if (cf.transform.childCount != 0)
+            if (cf.transform.childCount != 0 && cf.transform.childCount <= 4) 
                 rootImages.GetChild(cf.transform.childCount-1).gameObject.SetActive(true);
             
             while (index < cf.transform.childCount) {
@@ -41,10 +41,13 @@ public class Contents : MonoBehaviour {
                     aFile.GetComponent<ClosedFolder>().folder = content;
                 } else if (content.fileType == FileType.Text) {
                     aFile = Instantiate(text, transform);
+                    aFile.GetComponent<NotFolder>().fileType = "text";
                 } else if (content.fileType == FileType.Image) {
                     aFile = Instantiate(image, transform);
+                    aFile.GetComponent<NotFolder>().fileType = "image";
                 } else if (content.fileType == FileType.Audio) {
                     aFile = Instantiate(audio, transform);
+                    aFile.GetComponent<NotFolder>().fileType = "audio";
                 }
 
                 aFile.SetActive(true);

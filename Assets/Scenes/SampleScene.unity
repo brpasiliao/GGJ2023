@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 142353281}
   - component: {fileID: 142353282}
   m_Layer: 5
-  m_Name: Potatoes
+  m_Name: Name Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -584,7 +584,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 174290531}
-  background: {fileID: 1114490035}
   openedFolder: {fileID: 7051846414504657751}
   folder: {fileID: 940565365}
 --- !u!1 &216276896
@@ -599,6 +598,7 @@ GameObject:
   - component: {fileID: 216276900}
   - component: {fileID: 216276899}
   - component: {fileID: 216276898}
+  - component: {fileID: 216276901}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -721,6 +721,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 216276896}
   m_CullTransparentMesh: 1
+--- !u!95 &216276901
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216276896}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c0ac3f076499a427c9579c2fefa16c9b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &283097799
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +774,6 @@ RectTransform:
   - {fileID: 1149755951}
   - {fileID: 1212917976}
   - {fileID: 826973512}
-  - {fileID: 1939833878}
   m_Father: {fileID: 2034212171}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1094,9 +1113,8 @@ RectTransform:
   m_Children:
   - {fileID: 1555298483}
   - {fileID: 959241743}
-  - {fileID: 924838601}
+  - {fileID: 779100299}
   - {fileID: 847998899}
-  - {fileID: 1313092083}
   m_Father: {fileID: 1099038818}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1264,9 +1282,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 362951815}
-  background: {fileID: 0}
   info: {fileID: 2130412293}
-  graphic: {fileID: 0}
+  fileType: 
 --- !u!1 &367292301
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,7 +1794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 1307231564}
-  background: {fileID: 1114490035}
   openedFolder: {fileID: 7051846414504657751}
   folder: {fileID: 0}
 --- !u!1 &450336250
@@ -2336,9 +2352,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 515488138}
-  background: {fileID: 0}
   info: {fileID: 1863103916}
-  graphic: {fileID: 0}
+  fileType: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3063,7 +3078,7 @@ GameObject:
   - component: {fileID: 694444130}
   - component: {fileID: 694444131}
   m_Layer: 5
-  m_Name: picture
+  m_Name: Picture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3410,7 +3425,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 940565364}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3542,6 +3557,59 @@ MonoBehaviour:
     cooking, and her mom is already showing her that one weird sancocho recipe that
     asks for pumpkin! Right?! Her mom swears up and down that it makes the soup that
     much heartier and flavorful. "
+  contentsPublic: {fileID: 367292304}
+--- !u!1 &779100298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779100299}
+  - component: {fileID: 779100300}
+  m_Layer: 5
+  m_Name: Picture
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &779100299
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779100298}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.0001999, y: 1.0001999, z: 1.0001999}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 347213895}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &779100300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779100298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a142456a354734208bd798f4d39707c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileType: 1
+  fileName: Picture
+  description: Image of Emmanuel dicing onions near a sancocho pot.
   contentsPublic: {fileID: 367292304}
 --- !u!1 &789662371
 GameObject:
@@ -4148,7 +4216,7 @@ GameObject:
   - component: {fileID: 913440730}
   - component: {fileID: 913440731}
   m_Layer: 5
-  m_Name: Audio2
+  m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4266,59 +4334,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922155991}
   m_CullTransparentMesh: 1
---- !u!1 &924838600
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 924838601}
-  - component: {fileID: 924838602}
-  m_Layer: 5
-  m_Name: Name
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &924838601
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 924838600}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0001999, y: 1.0001999, z: 1.0001999}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 347213895}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &924838602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 924838600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a142456a354734208bd798f4d39707c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileType: 2
-  fileName: 
-  description: 
-  contentsPublic: {fileID: 367292304}
 --- !u!1 &940565363
 GameObject:
   m_ObjectHideFlags: 0
@@ -4352,7 +4367,6 @@ RectTransform:
   - {fileID: 2034212171}
   - {fileID: 826192512}
   - {fileID: 496196460}
-  - {fileID: 236880215}
   - {fileID: 743032175}
   m_Father: {fileID: 427487485}
   m_RootOrder: 0
@@ -4420,7 +4434,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 736085831}
-  - {fileID: 717675575}
   m_Father: {fileID: 347213895}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4511,7 +4524,7 @@ GameObject:
   - component: {fileID: 970831343}
   - component: {fileID: 970831344}
   m_Layer: 5
-  m_Name: Text2
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4877,7 +4890,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1082823096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4994,6 +5007,62 @@ MonoBehaviour:
   fileName: 
   description: 
   contentsPublic: {fileID: 367292304}
+--- !u!1 &1112146726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1112146727}
+  - component: {fileID: 1112146728}
+  m_Layer: 5
+  m_Name: Information
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1112146727
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112146726}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1854901711}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1112146728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112146726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a142456a354734208bd798f4d39707c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileType: 1
+  fileName: Luz
+  description: "Cecilia\u2019s little minion. She follows her mother to every poetry
+    slam and writer\u2019s meetup. She\u2019s been looking around for any way to
+    make her own spin on sancocho, and thinks of finding out the origin of the weird
+    tomato sauce ingredient. "
+  contentsPublic: {fileID: 367292304}
 --- !u!1 &1114490034
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,8 +5073,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1114490035}
   - component: {fileID: 1114490037}
+  - component: {fileID: 1114490039}
   - component: {fileID: 1114490036}
   - component: {fileID: 1114490038}
+  - component: {fileID: 1114490040}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -5167,6 +5238,38 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1114490039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114490034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf584aa4df6a4f65a1036ff8a72ce24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1114490040
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114490034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d33b8de1b52d4d1cb8c47c9d596d7c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1123674884
 GameObject:
   m_ObjectHideFlags: 0
@@ -5669,59 +5772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1313092082
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1313092083}
-  - component: {fileID: 1313092084}
-  m_Layer: 5
-  m_Name: Picture
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1313092083
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313092082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 347213895}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1313092084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313092082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a142456a354734208bd798f4d39707c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileType: 1
-  fileName: Picture
-  description: Image/audio of Emmanuel dicing onions near a sancocho pot.
-  contentsPublic: {fileID: 367292304}
 --- !u!1 &1369525291
 GameObject:
   m_ObjectHideFlags: 0
@@ -5925,13 +5975,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1399572789}
   - component: {fileID: 1399572790}
+  - component: {fileID: 1399572791}
   m_Layer: 0
-  m_Name: sazon_99
+  m_Name: Ingredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1399572789
 Transform:
   m_ObjectHideFlags: 0
@@ -5940,8 +5991,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1399572788}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2, y: 24, z: -5399.9995}
-  m_LocalScale: {x: 141, y: 173.15999, z: 60}
+  m_LocalPosition: {x: -2, y: -10, z: -5399.9995}
+  m_LocalScale: {x: 118.439995, y: 145.45439, z: 50.399998}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2130412294}
@@ -5988,7 +6039,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 573368544, guid: c785e704ad5cb4316bcae1414cb1adc7, type: 3}
+  m_Sprite: {fileID: 1370361655, guid: c785e704ad5cb4316bcae1414cb1adc7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5999,6 +6050,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1399572791
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399572788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1448834296
 GameObject:
   m_ObjectHideFlags: 0
@@ -6198,7 +6269,6 @@ RectTransform:
   m_Children:
   - {fileID: 1572104172}
   - {fileID: 603929565}
-  - {fileID: 1069840255}
   m_Father: {fileID: 139521651}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6581,7 +6651,7 @@ GameObject:
   - component: {fileID: 1676082190}
   - component: {fileID: 1676082191}
   m_Layer: 5
-  m_Name: Pumpkin
+  m_Name: Calabaza
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6988,7 +7058,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1090157073}
+  - {fileID: 1112146727}
   m_Father: {fileID: 1671482179}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7301,62 +7371,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923709753}
   m_CullTransparentMesh: 1
---- !u!1 &1939833877
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1939833878}
-  - component: {fileID: 1939833879}
-  m_Layer: 5
-  m_Name: Information
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1939833878
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939833877}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 283097800}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1939833879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1939833877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a142456a354734208bd798f4d39707c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fileType: 1
-  fileName: Jovan
-  description: "Born right after WW2, Jovan is Juan Jr.\u2019s only son. After his
-    father was too old to work, Jovan took over the farm and helped keep it running
-    to this day. He began putting sofrito into the Sancocho, to help enhance the
-    flavors that his aunt\u2019s sazon already gave it. "
-  contentsPublic: {fileID: 0}
 --- !u!1 &1945000517
 GameObject:
   m_ObjectHideFlags: 0
@@ -7514,7 +7528,7 @@ PrefabInstance:
     - target: {fileID: 5363538696063243239, guid: df095e6d9c5504a27a68489d7867a8fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 724443690}
+      objectReference: {fileID: 1399572788}
     - target: {fileID: 5363538696063243239, guid: df095e6d9c5504a27a68489d7867a8fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
@@ -7537,7 +7551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5363538696063243239, guid: df095e6d9c5504a27a68489d7867a8fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5363538696063243239, guid: df095e6d9c5504a27a68489d7867a8fc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -7777,9 +7791,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 1976777137}
-  background: {fileID: 0}
   info: {fileID: 695482230}
-  graphic: {fileID: 0}
+  fileType: 
 --- !u!1 &2034212170
 GameObject:
   m_ObjectHideFlags: 0
@@ -8246,7 +8259,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 2126214553}
-  background: {fileID: 1114490035}
   openedFolder: {fileID: 7051846414504657751}
   folder: {fileID: 940565365}
 --- !u!1 &2130412293
@@ -8259,7 +8271,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2130412294}
   - component: {fileID: 2130412296}
+  - component: {fileID: 2130412298}
   - component: {fileID: 2130412295}
+  - component: {fileID: 2130412297}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -8327,6 +8341,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2130412293}
   m_CullTransparentMesh: 1
+--- !u!95 &2130412297
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130412293}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 911d06a7ac89fba40a36788b207632cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2130412298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130412293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38660ae26951547769b7ecdbfe47e15f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient: {fileID: 1399572788}
+  ingredientAnims:
+  - {fileID: 9100000, guid: 8af0ae39c315642bdbab2bb1539d7a5c, type: 2}
+  - {fileID: 9100000, guid: d5c999d34c453494b90e7ba4489dc3c0, type: 2}
+  - {fileID: 9100000, guid: d3fb04ac6da0b0e4285cd7854fb6c986, type: 2}
+  - {fileID: 9100000, guid: b3a1d701edac84cb18b8aad05dd4c6df, type: 2}
+  - {fileID: 9100000, guid: 4be8c7108b09c4c62ac3583479f0de01, type: 2}
+  - {fileID: 9100000, guid: 350b47e15f2fcb548b852d672008e9fe, type: 2}
+  - {fileID: 9100000, guid: cd74cba8f47336b43bf9ac7a0742de58, type: 2}
+  - {fileID: 9100000, guid: f5ceeaa12305b47d48117900955e2aca, type: 2}
+  - {fileID: 9100000, guid: b9631c91ba5ad47b4b26312c1c6f6894, type: 2}
+  - {fileID: 9100000, guid: 4ca7a208c1fe54b8cb395cbf46a38d89, type: 2}
+  - {fileID: 9100000, guid: fbc978841f8a96f43bda3576cff72ba2, type: 2}
 --- !u!222 &2168831595204813387
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8675,7 +8734,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 4283406509124007815}
-  background: {fileID: 1114490035}
 --- !u!82 &7051846414504657752
 AudioSource:
   m_ObjectHideFlags: 0

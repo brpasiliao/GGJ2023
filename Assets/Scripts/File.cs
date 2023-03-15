@@ -12,7 +12,7 @@ public class File : MonoBehaviour {
     public static Contents contents; 
     public Contents contentsPublic; 
 
-    void OnEnable() {
+    void Awake() {
         fileName = gameObject.name;
         contents = contentsPublic;
     }
