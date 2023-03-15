@@ -44,6 +44,12 @@ public class Contents : MonoBehaviour {
                 if (content.fileType == FileType.Folder) {
                     aFile = Instantiate(folder, transform);
                     aFile.GetComponent<ClosedFolder>().folder = content;
+                    if (content.encrypted) {
+                        aFile.GetComponent<ClosedFolder>().ChangeSprite("locked");
+                        aFile.GetComponent<ClosedFolder>().encrypted = content.encrypted;
+                        aFile.GetComponent<ClosedFolder>().question = content.question;
+                        aFile.GetComponent<ClosedFolder>().answer = content.answer;
+                    }
                 } else if (content.fileType == FileType.Text) {
                     aFile = Instantiate(text, transform);
                     aFile.GetComponent<NotFolder>().fileType = "text";

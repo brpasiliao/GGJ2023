@@ -9,6 +9,10 @@ public class File : MonoBehaviour {
     public string fileName;
     public string description;
 
+    public bool encrypted;
+    public string question;
+    public string answer;
+
     public static Contents contents; 
     public Contents contentsPublic; 
 

@@ -11,6 +11,7 @@ public class NotFolder : FoldersNFiles {
     public string description = "";
 
     protected override void Click() {
+        overlay.SetActive(true);
         info.SetActive(true);
         StartCoroutine(DisplayGraphic());
 

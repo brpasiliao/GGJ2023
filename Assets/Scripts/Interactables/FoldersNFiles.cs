@@ -9,6 +9,8 @@ public class FoldersNFiles : MonoBehaviour, IPointerClickHandler {
     public TMP_Text fileName;
     public Image icon;
 
+    public GameObject overlay;
+
     public virtual void OnPointerClick(PointerEventData eventData) {
         if (eventData.clickCount == 2) {
             Click();
