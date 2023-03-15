@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Animations;
 
-public class Image : MonoBehaviour {
-    public GameObject ingredient;
-    Animator anim;
+public class ImageOverlay : MonoBehaviour {
+    public Animator anim;
 
     Dictionary<string, AnimatorController> images;
     public AnimatorController[] ingredientAnims;
 
     void Awake() {
-        anim = ingredient.GetComponent<Animator>();
-
         images = new Dictionary<string, AnimatorController>() {
             { "Pork", ingredientAnims[0] },
             { "Sofrito", ingredientAnims[1] },
@@ -28,16 +25,7 @@ public class Image : MonoBehaviour {
         };
     }
 
-    void OnEnable() {
-        StartCoroutine(DisplayIngredient());
-    }
-
     public void ChangeIngredient(string name) {
         anim.runtimeAnimatorController = images[name];
-    }
-
-    public IEnumerator DisplayIngredient() {
-        yield return new WaitForSeconds(0.5f);
-        ingredient.SetActive(true);
     }
 }

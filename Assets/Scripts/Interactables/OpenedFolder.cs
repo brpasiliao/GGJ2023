@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class OpenedFolder : FoldersNFiles {
+    public Sprite open;
+    public Sprite closed;
+
     protected override void Click() {
         File.GoToParent();
         GetComponent<AudioSource>().Play();
@@ -13,5 +16,13 @@ public class OpenedFolder : FoldersNFiles {
             ChangeName(GameObject.FindObjectOfType<CurrentFolder>().GetComponent<File>().fileName);
             EventBroker.CallMoveBackground(false);
         }
+    }
+
+    void OnMouseOver() {
+        icon.sprite = closed;
+    }
+
+    void OnMouseExit() {
+        icon.sprite = open;
     }
 }

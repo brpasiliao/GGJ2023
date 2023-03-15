@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ClosedFolder : FoldersNFiles {
     public OpenedFolder openedFolder;
-
     public File folder;
+
+    public Sprite closed;
+    public Sprite open;
 
     protected override void Click() {    
         transform.parent.GetComponent<AudioSource>().Play();
@@ -15,5 +17,13 @@ public class ClosedFolder : FoldersNFiles {
 
         if (!GameObject.FindObjectOfType<CurrentFolder>().CompareTag("Root")) 
             EventBroker.CallMoveBackground(true);
+    }
+
+    void OnMouseOver() {
+        icon.sprite = open;
+    }
+
+    void OnMouseExit() {
+        icon.sprite = closed;
     }
 }

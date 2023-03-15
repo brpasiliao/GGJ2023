@@ -5,6 +5,7 @@ using TMPro;
 
 public class Contents : MonoBehaviour {
     public Transform rootImages;
+    public GameObject endRoot;
 
     public GameObject root;
     public GameObject folder;
@@ -23,15 +24,19 @@ public class Contents : MonoBehaviour {
             aFile.SetActive(true);
             aFile.GetComponent<FoldersNFiles>().ChangeName(aFile.transform.GetChild(0).GetComponent<TMP_Text>().text);
 
-        } else {
-            int index = 0;
-            File content;
+            endRoot.SetActive(true);
+            foreach (Transform child in rootImages) 
+                child.gameObject.SetActive(false);
 
+        } else {
+            endRoot.SetActive(false);
             foreach (Transform child in rootImages) 
                 child.gameObject.SetActive(false);
             if (cf.transform.childCount != 0 && cf.transform.childCount <= 4) 
                 rootImages.GetChild(cf.transform.childCount-1).gameObject.SetActive(true);
             
+            int index = 0;
+            File content;
             while (index < cf.transform.childCount) {
                 content = cf.transform.GetChild(index).GetComponent<File>();
                 GameObject aFile = null;
@@ -42,6 +47,7 @@ public class Contents : MonoBehaviour {
                 } else if (content.fileType == FileType.Text) {
                     aFile = Instantiate(text, transform);
                     aFile.GetComponent<NotFolder>().fileType = "text";
+                    aFile.GetComponent<NotFolder>().description = content.description;
                 } else if (content.fileType == FileType.Image) {
                     aFile = Instantiate(image, transform);
                     aFile.GetComponent<NotFolder>().fileType = "image";
