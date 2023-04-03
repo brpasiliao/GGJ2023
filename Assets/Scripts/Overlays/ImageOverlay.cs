@@ -1,26 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
+using TMPro;
 
 public class ImageOverlay : MonoBehaviour {
     public Animator anim;
+    public TMP_Text descriptionBox;
 
-    Dictionary<string, AnimatorController> images;
-    public AnimatorController[] ingredientAnims;
+    Dictionary<string, RuntimeAnimatorController> images;
+    public RuntimeAnimatorController[] ingredientAnims;
 
     void Awake() {
-        images = new Dictionary<string, AnimatorController>() {
-            { "Pork", ingredientAnims[0] },
+        images = new Dictionary<string, RuntimeAnimatorController>() {
+            { "Beef", ingredientAnims[0] },
             { "Sofrito", ingredientAnims[1] },
             { "Onion", ingredientAnims[2] },
             { "Name Root", ingredientAnims[3] },
             { "Calabaza", ingredientAnims[4] },
             { "Sazon", ingredientAnims[5] },
-            { "Tomato Paste", ingredientAnims[6] },
+            { "Tomato Sauce", ingredientAnims[6] },
             { "Oregano", ingredientAnims[7] },
             { "Corn", ingredientAnims[8] },
-            { "Yucca", ingredientAnims[9] },
+            { "Yautia", ingredientAnims[9] },
             { "Malanga", ingredientAnims[10] },
         };
     }
@@ -28,4 +29,9 @@ public class ImageOverlay : MonoBehaviour {
     public void ChangeIngredient(string name) {
         anim.runtimeAnimatorController = images[name];
     }
+
+    public void ChangeDescription(string description) {
+        descriptionBox.text = description;
+    }
 }
+

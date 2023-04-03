@@ -7,6 +7,7 @@ public enum FileType {Folder, Text, Image, Audio};
 public class File : MonoBehaviour {
     public FileType fileType;
     public string fileName;
+    [TextArea(5, 10)]
     public string description;
 
     public bool encrypted;
@@ -17,7 +18,7 @@ public class File : MonoBehaviour {
     public Contents contentsPublic; 
 
     void Awake() {
-        fileName = gameObject.name;
+        if (fileName == "") fileName = gameObject.name;
         contents = contentsPublic;
     }
 

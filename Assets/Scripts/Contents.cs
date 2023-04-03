@@ -57,6 +57,7 @@ public class Contents : MonoBehaviour {
                 } else if (content.fileType == FileType.Image) {
                     aFile = Instantiate(image, transform);
                     aFile.GetComponent<NotFolder>().fileType = "image";
+                    aFile.GetComponent<NotFolder>().description = content.description;
                 } else if (content.fileType == FileType.Audio) {
                     aFile = Instantiate(audio, transform);
                     aFile.GetComponent<NotFolder>().fileType = "audio";
