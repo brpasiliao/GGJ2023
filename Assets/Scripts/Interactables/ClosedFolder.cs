@@ -21,6 +21,8 @@ public class ClosedFolder : FoldersNFiles {
             passwordInput.SetPassword(this);
 
         } else {
+            EventBroker.ChangeDepth(-1);
+
             transform.parent.GetComponent<AudioSource>().Play();
             openedFolder.ChangeName(folder.fileName);
             openedFolder.gameObject.SetActive(true);

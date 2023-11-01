@@ -7,6 +7,8 @@ public class OpenedFolder : FoldersNFiles {
     public Sprite closed;
 
     protected override void Click() {
+        EventBroker.ChangeDepth(1);
+        
         File.GoToParent();
         GetComponent<AudioSource>().Play();
 
